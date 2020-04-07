@@ -6,7 +6,7 @@
           <v-card-title primary-title>
             Login
           </v-card-title>
-          <login-form :join="joinSubmit"></login-form>
+          <login-form @join="joinSubmit"></login-form>
         </v-card>
       </v-col>
     </v-row>

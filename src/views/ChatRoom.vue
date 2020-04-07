@@ -1,7 +1,7 @@
 <template>
   <div class="inner-wrap" fluid fill-height inner-wrap>
     <message-list :msgs="msgDatas" class="msg-list"></message-list>
-    <message-form v-on:submitMessage="sendMessage" class="msg-form" ></message-form>
+    <message-form @submitMessage="sendMessage" class="msg-form"></message-form>
   </div>
 </template>
 

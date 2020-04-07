@@ -1,16 +1,16 @@
 <template>
   <v-list v-auto-bottom="msgs">
     <transition-group name="list">
-      <div v-for="(msg) in msgs" :key="msg.id">
-        <v-list-tile>
-          <v-list-tile-action>
+      <div v-for="(msg, index) in msgs" :key="index">
+        <v-list-item>
+          <v-list-item-action>
             <span>{{msg.from.name}}</span>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>{{msg.msg}}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-divider inset></v-divider>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>{{msg.msg}}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <!-- <v-divider inset></v-divider> -->
       </div>
     </transition-group>
   </v-list>
