@@ -1,8 +1,26 @@
 <template>
-  <div class="inner-wrap" fluid fill-height inner-wrap>
-    <message-list :msgs="msgDatas" class="msg-list"></message-list>
-    <message-form @submitMessage="sendMessage" class="msg-form"></message-form>
-  </div>
+  <v-container max-width="500px" fluid grid-list-sm fill-height>
+    <v-row
+      justify-center
+      align-center
+      fill-height
+    >
+      <v-col fill-height>
+        <v-card height="100%">
+          <v-card-title primary-title>
+            채팅방
+          </v-card-title>
+          <v-card-text background-color="grey darken-1">
+            <message-list :msgs="msgDatas"></message-list>
+          </v-card-text>
+          <v-card-actions>
+            <!-- <v-spacer></v-spacer> -->
+            <message-form @submitMessage="sendMessage"></message-form>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
