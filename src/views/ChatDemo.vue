@@ -1,8 +1,7 @@
 <template>
-  <v-card>
-    <v-card-text>
+  <div>
       <Chat
-       :participants="participants"
+        :participants="participants"
         :myself="myself"
         :messages="messages"
         :on-type="onType"
@@ -24,8 +23,7 @@
         :on-image-clicked="onImageClicked"
         :send-images="true"
         :profile-picture-config="profilePictureConfig"/>
-    </v-card-text>
-  </v-card>
+    </div>
 </template>
 
 <script>

@@ -1,18 +1,19 @@
 <template>
   <v-list v-auto-bottom="msgs">
-    <transition-group name="list">
-      <div v-for="(msg, index) in msgs" :key="index">
-        <v-list-item>
-          <v-list-item-action>
-            <span>{{msg.from.name}}</span>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>{{msg.msg}}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <!-- <v-divider inset></v-divider> -->
+    <v-list-item v-for="(msg, index) in msgs" :key="index">
+      <!-- <v-list-item-avatar v-if="msg.from.name != '나'">
+        <v-img :src="item.avatar"></v-img>
+        <span>{{msg.from.name}}</span>
+      </v-list-item-avatar> -->
+      <div class="d-flex flex-row" :class="{'justify-end': msg.from.name === '나'}">
+        <v-list-item-action v-if="msg.from.name !== '나'">
+          <span>{{msg.from.name}}</span>
+        </v-list-item-action>
+        <v-list-item-content>
+          <v-list-item-title>{{msg.msg}}</v-list-item-title>
+        </v-list-item-content>
       </div>
-    </transition-group>
+    </v-list-item>
   </v-list>
 </template>
 
@@ -22,17 +23,3 @@ export default {
   props: ['msgs']
 }
 </script>
-
-<style>
-.list-item {
-  display: inline-block;
-  margin-right: 10px;
-}
-.list-enter-active, .list-leave-active {
-  transition: all 1s;
-}
-.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
-  opacity: 0;
-  transform: translateX(30px);
-}
-</style>
