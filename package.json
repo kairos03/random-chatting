@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "firebase-tools": "^8.1.1",
     "socket.io": "^2.3.0",
     "vue": "^2.6.11",
     "vue-quick-chat": "^1.1.1",
