@@ -6,7 +6,7 @@
         <span>{{msg.from.name}}</span>
       </v-list-item-avatar> -->
       <div class="d-flex flex-row" :class="{'justify-end': msg.from.name === '나'}">
-        <v-list-item-action v-if="msg.from.name !== '나'">
+        <v-list-item-action>
           <span>{{msg.from.name}}</span>
         </v-list-item-action>
         <v-list-item-content>
