@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login'
 import ChatRoom from '../views/ChatRoom'
-import ChatDemo from '../views/ChatDemo'
+import Sign from '../views/Sign'
 
 Vue.use(VueRouter)
 
@@ -18,9 +18,9 @@ const routes = [
     component: ChatRoom
   },
   {
-    path: '/chat-demo',
-    name: 'ChatDemo',
-    component: ChatDemo
+    path: '/sign',
+    name: 'Sign',
+    component: Sign
   },
   {
     path: '/about',
