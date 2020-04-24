@@ -4,7 +4,7 @@
       <v-col sm="12" md="6">
         <v-img
           src="../images/main.png"
-          max-width="500px"
+          max-width="300px"
         ></v-img>
       </v-col>
       <v-col sm="12" md="6">
@@ -23,7 +23,7 @@
           <v-row>
             <v-col class="d-flex align-center justify-center">
               <span>또는</span>
-              <v-btn dense depressed @click="signin = !signin">{{btn_text}}</v-btn>
+              <a dense depressed @click="signin = !signin"> {{btn_text}} </a>
             </v-col>
           </v-row>
         </v-container>

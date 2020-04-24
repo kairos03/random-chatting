@@ -6,7 +6,7 @@
     <v-form>
       <v-card-text>
         <v-text-field
-          label="ID"
+          label="Email"
         ></v-text-field>
         <v-text-field
           type="password"
