@@ -6,6 +6,7 @@ import error from './error'
 import vuetify from './plugins/vuetify'
 import './plugins/socket'
 import './plugins/directives'
+import './plugins/firebase'
 
 Vue.config.productionTip = false
 
